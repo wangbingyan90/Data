@@ -20,14 +20,14 @@ public class Main {
 		builder.setSpout("Spout1", new Spout1());
 		builder.setSpout("Spout2", new Spout2());
 		
-		builder.setBolt("Bolt1", new Bolt1()).shuffleGrouping("Spout1").shuffleGrouping("Spout2");
-		builder.setBolt("Bolt2", new Bolt2()).shuffleGrouping("Spout2");
-		
-		builder.setBolt("Bolt3", new Bolt3()).shuffleGrouping("Bolt1");
-		builder.setBolt("Bolt4", new Bolt3()).shuffleGrouping("Bolt2");
-		builder.setBolt("Bolt5", new Bolt3()).shuffleGrouping("Bolt2");	
-		
-		builder.setBolt("Bolt6", new Bolt3()).shuffleGrouping("Bolt3").shuffleGrouping("Bolt4").shuffleGrouping("Bolt5");
+//		builder.setBolt("Bolt1", new Bolt1()).shuffleGrouping("Spout1").shuffleGrouping("Spout2");
+//		builder.setBolt("Bolt2", new Bolt2()).shuffleGrouping("Spout2");
+//		
+//		builder.setBolt("Bolt3", new Bolt3()).shuffleGrouping("Bolt1");
+//		builder.setBolt("Bolt4", new Bolt3()).shuffleGrouping("Bolt2");
+//		builder.setBolt("Bolt5", new Bolt3()).shuffleGrouping("Bolt2");	
+//		
+//		builder.setBolt("Bolt6", new Bolt3()).shuffleGrouping("Bolt3").shuffleGrouping("Bolt4").shuffleGrouping("Bolt5");
 		
 		
 		LocalCluster  cluster = new LocalCluster();
